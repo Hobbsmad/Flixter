@@ -6,9 +6,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+         
   def enrolled_in?(course)
-    return enrolled_courses.include?(course)
-  end
-
-end
+      enrolled_courses = enrollments.collect(&:course)
+      return enrolled_courses.include?(course)
+      end
+    end
