@@ -41,6 +41,7 @@ gem 'carrierwave-aws'
 gem 'stripe'
 gem 'ranked-model'
 gem 'rails-assets-tether', '>= 1.3.3'
+gem 'jquery-ui-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
