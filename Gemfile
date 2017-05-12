@@ -40,7 +40,9 @@ gem 'mini_magick'
 gem 'carrierwave-aws'
 gem 'stripe'
 gem 'ranked-model'
-gem 'rails-assets-tether', '>= 1.3.3'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 # Use Capistrano for deployment
