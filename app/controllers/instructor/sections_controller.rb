@@ -3,10 +3,6 @@ before_action :authenticate_user!
 before_action :require_authorized_for_current_course, only: [:create]
 before_action :require_authorized_for_current_section, only: [:update]
 
-  def new
-    @section = Section.new
-  end
-
   def create
     @section = current_course.sections.create(section_params)
     #@section = Section.new(section_params)
