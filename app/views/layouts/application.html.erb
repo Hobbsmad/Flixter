@@ -25,9 +25,6 @@
         </ul>
         <ul class="navbar-nav">
           <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to 'My Dashboard', dashboard_path %>
-          </li>
             <li class="nav-item">
               <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
             </li>
@@ -44,12 +41,16 @@
     </nav>
 
 
-        <% if notice.present? %>
-            <p class="alert alert-info"><%= notice %></p>
-          <% end %>
+      <% if notice.present? %>
+      <div class="alert alert-warning" role="alert">
+        <%= notice %>
+      </div>
+      <% end %>
         <% if alert.present? %>
-            <p class="alert alert-danger"><%= alert %></p>
-          <% end %>
+        <div class="alert alert-danger" role="alert">
+        <%= alert %>
+        </div>
+      <% end %>
 
 
         <%= yield %>
@@ -68,13 +69,13 @@
         <div class="col-12 col-sm-3">
           <b>About</b>
           <br />
-          <%= link_to 'Team', '#' %>
+          <%= link_to 'Team', 'https://www.facebook.com/theFirehoseProject/' %>
           <br />
-          <%= link_to 'Careers', '#' %>
+          <%= link_to 'Careers', courses_path %>
           <br />
-          <%= link_to 'Privacy Policy', '#' %>
+          <%= link_to 'Privacy Policy', privacy_path %>
           </div>
-      <div class="col-12 col-sm-3">
+          <div class="col-12 col-sm-3">
           <b>Contact</b>
           <br />
           madelyn.hobbs@gmail.com
